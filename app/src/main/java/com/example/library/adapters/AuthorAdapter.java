@@ -36,8 +36,11 @@ public class AuthorAdapter extends ArrayAdapter<Author> {
         // Lookup view for data population
         TextView textViewName = convertView.findViewById(R.id.textViewName);
         TextView textViewSurname = convertView.findViewById(R.id.textViewSurname);
+        TextView textViewBookCount = convertView.findViewById(R.id.textViewBookCount);
+
         Button buttonEdit = convertView.findViewById(R.id.buttonEdit);
         Button buttonDelete = convertView.findViewById(R.id.buttonDelete);
+        textViewBookCount.setText(String.valueOf(author.getBooks().size()));
 
         // Populate the data into the template view using the data object
         textViewName.setText(author.getName());

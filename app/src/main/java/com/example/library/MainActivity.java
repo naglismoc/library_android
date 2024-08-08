@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.library.adapters.AuthorAdapter;
 import com.example.library.databinding.ActivityMainBinding;
 import com.example.library.entities.Author;
+import com.example.library.entities.Book;
 import com.example.library.interfaces.IServices.IAuthorApiService;
 import com.example.library.interfaces.AuthorActionListener;
 
@@ -174,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements AuthorActionListe
             String name = editTextName.getText().toString();
             String surname = editTextSurname.getText().toString();
             if (author == null) {
-                createAuthor(new Author(0, name, surname));
+                createAuthor(new Author(0, name, surname,new ArrayList<Book>()));
             } else {
                 author.setName(name);
                 author.setSurname(surname);
