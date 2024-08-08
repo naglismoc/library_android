@@ -1,4 +1,4 @@
-package com.example.library;
+package com.example.library.entities;
 
 public class Author {
     private long id;
